@@ -1,0 +1,42 @@
+{
+  "application": {
+    "biz_thread_count": "auto",
+    "function": {
+      "path": [
+        "dist/db.so",
+        "dist/fortunes.so",
+        "dist/json.so",
+        "dist/plaintext.so",
+        "dist/queries.so",
+        "dist/updates.so"
+      ],
+      "default": "plaintext",
+      "not_support": "plaintext"
+    }
+  },
+  "service_modules": {
+    "v4-server-http.so": {
+      "http_server": {
+        "type": "server",
+        "config": {
+          "port": 8080
+        }
+      }
+    },
+    "v4-client-mysql.so": {
+      "db": {
+        "type": "client",
+        "config": {
+          "ip": "tfb-database",
+          "port": "3306",
+          "user": "benchmarkdbuser",
+          "pwd": "benchmarkdbpass",
+          "db": "hello_world",
+          "init_count": "10",
+          "max_query_count": 0,
+          "max_record_count": 5000
+        }
+      }
+    }
+  }
+}

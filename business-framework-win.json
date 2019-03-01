@@ -1,0 +1,43 @@
+{
+  "application": {
+    "biz_thread_count": "auto",
+    "function": {
+      "path": [
+        "dist/db.dll",
+        "dist/fortunes.dll",
+        "dist/json.dll",
+        "dist/plaintext.dll",
+        "dist/queries.dll",
+        "dist/updates.dll"
+      ],
+      "default": "plaintext",
+      "not_support": "plaintext"
+    }
+  },
+  "service_modules": {
+    "v4-server-http.dll": {
+      "http_server": {
+        "type": "server",
+        "config": {
+          "port": 8080
+        }
+      }
+    },
+    "v4-client-mysql.dll": {
+      "db": {
+        "log": false,
+        "type": "client",
+        "config": {
+          "ip": "tfb-database",
+          "port": "3306",
+          "user": "benchmarkdbuser",
+          "pwd": "benchmarkdbpass",
+          "db": "hello_world",
+          "init_count": "10",
+          "max_query_count": 0,
+          "max_record_count": 5000
+        }
+      }
+    }
+  }
+}

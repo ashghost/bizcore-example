@@ -1,0 +1,27 @@
+{
+  "framework": "v4-core",
+  "tests": [{
+    "default": {
+      "json_url": "/json",
+      "db_url": "/db",
+      "query_url": "/queries?queries=",
+      "update_url": "/updates?queries=",
+      "fortune_url": "/fortunes",
+      "plaintext_url": "/plaintext",
+      "port": 8080,
+      "approach": "Realistic",
+      "classification": "Platform",
+      "database": "MySQL",
+      "framework": "None",
+      "language": "C++",
+      "flavor": "None",
+      "orm": "Raw",
+      "platform": "None",
+      "webserver": "Crow",
+      "os": "Linux",
+      "database_os": "Linux",
+      "display_name": "v4-core-mysql",
+      "notes": ""
+    }
+  }]
+}

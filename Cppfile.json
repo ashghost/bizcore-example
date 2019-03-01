@@ -1,0 +1,9 @@
+{
+  "macro": [
+    "FUNCTION_EXPORT"
+  ],
+  "lib": [
+    "buffer",
+    "bizcore"
+  ]
+}
